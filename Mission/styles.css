@@ -1,0 +1,44 @@
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  main, header, footer {
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    color: #006EB6;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  main p {
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
+  ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  footer img {
+    width: 150px;
+    margin-top: 40px;
+  }
+  
