@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid #ccc;
+    border: 20px solid #7c7c7c;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
