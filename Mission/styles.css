@@ -1,4 +1,4 @@
-body {
+.content {
     font-family: 'Times New Roman', serif;
     font-size: 20px;
     margin: 0;
@@ -6,6 +6,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   main, header, footer {
@@ -21,10 +25,11 @@ body {
     line-height: 1.2;
   }
   
-  h2 {
+  h3 {
     color: #006EB6;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-decoration: underline;
   }
   
   main p {
