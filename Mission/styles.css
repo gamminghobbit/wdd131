@@ -58,7 +58,7 @@ footer img {
     }
 
     .dark footer img {
-      background-color: white;
+      background-color: rgb(132, 130, 130);
       border-radius: 8px;
       padding: 4px;
     }
