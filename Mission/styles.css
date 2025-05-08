@@ -10,40 +10,68 @@ body {
     border-radius: 50px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  main, header, footer {
+main, header, footer {
     max-width: 600px;
     padding: 20px;
     margin: 0 auto;
     text-align: center;
   }
   
-  h1 {
+h1 {
     text-transform: uppercase;
     letter-spacing: 4px;
     line-height: 1.2;
   }
   
-  h3 {
+h3 {
     color: #006EB6;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: underline;
   }
-  
-  main p {
+main p {
     text-align: left;
     line-height: 1.6;
     margin-top: 20px;
   }
-  
-  ol {
+
+ol {
     text-align: left;
     padding-left: 20px;
   }
-  
-  footer img {
+
+footer img {
     width: 150px;
     margin-top: 40px;
   }
+
+.dark {
+    background-color: #333;
+    color: white;
+  }
+
+.dark h3{
+    color: #A0D4ED;
+    }
+
+    .dark footer img {
+      background-color: white;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+.themeSelector {
+  padding: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.dark .themeSelector {
+  background-color: #444;
+  color: white;
+  border: 1px solid #ccc;
+}
+

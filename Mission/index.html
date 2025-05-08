@@ -8,12 +8,22 @@
     <title>BYU-Idaho Mission Statement</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="content">
         <header>
             <h1>Mission statement</h1>
             <h3>Brigham Young University - BYU-Idaho</h3>
         </header>
+        
+        <div class="theme-controls">
+            <label for="themeSelector">Theme:</label>
+            <select id="themeSelector" class="themeSelector">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>          
+
         <main>
             <p>
                 Brigham Young University-Idaho was founded and is supported and guided by
@@ -33,7 +43,8 @@
         </main>
     </div>
     <footer>
-        <img src="byui-logo_blue.jpg" alt="BYU-I Logo">
+        <img id = "logo" src="byui-logo_blue.jpg" alt="BYU-I Logo">
     </footer>
+    <script src="mission.js" defer></script>
 </body>
 </html>
