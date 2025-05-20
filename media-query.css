@@ -1,0 +1,52 @@
+/* 1. Base font setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0; /* light gray for contrast */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 2. Common layout styles for header, main, and footer */
+  header,
+  main,
+  footer {
+    max-width: 640px;
+    margin: 1rem auto; /* centers the content */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #cce0ff; /* soft blue */
+  }
+  
+  /* 3. Main content layout using CSS Grid */
+  main {
+    display: grid;
+    grid-template-columns: 1fr; /* one column by default */
+    gap: 1rem;
+  }
+  
+  /* 4. Section styles */
+  section {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 5. Footer tweaks */
+  footer {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* 6. Media Query for screen width 500px or greater */
+  @media screen and (min-width: 500px) {
+    header {
+      background-color: black;
+      color: white;
+    }
+  
+    main {
+      grid-template-columns: 1fr 1fr; /* two equal columns */
+    }
+  }
+  
