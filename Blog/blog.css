@@ -1,0 +1,94 @@
+/*General Body, heading, & link Styles*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #3b2b39;
+  margin: 0;
+  padding: 0;
+}
+h1, h2 {
+  font-family: 'Lora', serif;
+}
+a {
+  text-decoration: none;
+  color: #6C0E23;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*Header & Navigation Layout*/
+header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #EFC69B;
+  border-bottom: 3px solid #6C0E23;
+}
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  justify-content: end;
+  justify-items: end;
+  max-width: 960px;
+  margin: auto;
+  padding: 0;
+}
+nav li {
+  padding: 0.5rem;
+}
+
+/*Main Content Grid Layout*/
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/*Article Layout*/
+article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #fdf7f0;
+}
+
+/*Article Details and Content*/
+.details {
+  font-size: 0.9rem;
+  color: #181818;
+}
+.content h2 {
+  margin-top: 0;
+}
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+/*Skip Link stuff*/
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: yellow;
+  color: black;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+.skiptocontent a:focus {
+  top: 0;
+}
+
+/*Place holder style*/
+main p {
+  grid-column: 2;
+  font-style: italic;
+  color: #646464;
+}
