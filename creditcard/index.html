@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Review Blog">
+    <meta name="author" content="Your Name">
+    <title>CreditCardForm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body>
+  <form action="#">
+    <!-- Card Front -->
+    <div class="card card-front">
+        <label for="cardholder">Cardholder Name</label>
+        <input type="text" id="cardholder" name="cardholder" placeholder="John Doe" required>
+
+        <label for="cardnumber">Card Number</label>
+        <input type="text" id="cardnumber" name="cardnumber" placeholder="1234 5678 9012 3456" required maxlength="19">
+
+        <div class="exp-image-row">
+            <div>
+                <label for="exp">Expiration Date</label>
+                <input type="text" id="exp" name="exp" placeholder="MM/YY" required>
+            </div>
+            <img class="card-image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzd..." alt="Card Logo">
+        </div>
+    </div>
+
+
+    <!-- Card Back -->
+    <div class="card card-back">
+      <div class="black-bar"></div>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" placeholder="123" required maxlength="3">
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
