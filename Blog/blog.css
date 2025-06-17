@@ -85,7 +85,7 @@ article {
 .skiptocontent a:focus {
   top: 0;
 }
-
+ 
 /*Place holder style*/
 main p {
   grid-column: 2;
