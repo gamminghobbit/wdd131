@@ -28,16 +28,19 @@ form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 .card-back {
-  background-color: #e0e0e0;
-  z-index: 0;
-  margin-top: -200px;
-  padding-top: 2rem;
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
+  background-color: #e0e0e0;
+  position: relative;
+  z-index: 1;
+  margin-top: -100px; /* Just enough overlap */
+  padding-top: 2rem;
 }
-
 label {
   display: block;
   margin-bottom: 0.3rem;
@@ -66,6 +69,7 @@ button[type="submit"]:hover {
 .card-image {
   width: 55px;
   height: auto;
+  justify-self: end;
 }
 .exp-image-row {
   display: grid;
