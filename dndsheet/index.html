@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hardy's D&D 3.5 Character Sheet</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Alike&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Hardy's 3.5e Character Sheet</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="future.html">Future Plans</a>
+      <a href="#">New Character</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome, Adventurer!</h2>
+      <p>Select or create a character to begin.</p>
+      <section class="character-header">
+      <h1>Hardy's 3.5e Character Sheet</h1>
+      <label>
+        Name: <input type="text" id="char-name" placeholder="John Smith" />
+      </label>
+      <label>
+        Class: <input type="text" id="char-class" placeholder="Fighter" />
+      </label>
+      <label>
+        Level: <input type="number" id="char-level" min="1" value="1" />
+      </label>
+      <button onclick="updateCharacter()">Update</button>
+      <p id="character-output"></p>
+    </section>
+    <section class="class-selector">
+  <h2>Choose Class Preset</h2>
+  <select id="class-preset" onchange="applyClassPreset()">
+    <option value="">-- Select a Class --</option>
+    <option value="fighter">Fighter</option>
+    <option value="rogue">Rogue</option>
+    <option value="wizard">Wizard</option>
+    <option value="cleric">Cleric</option>
+  </select>
+</section>
+    <section class="ability-scores">
+  <div class="ability">
+    <h3>STR</h3>
+    <input type="number" id="str" value="10" min="1" />
+    <p>Modifier: <span id="str-mod">+0</span></p>
+  </div>
+  <div class="ability">
+    <h3>DEX</h3>
+    <input type="number" id="dex" value="10" min="1" />
+    <p>Modifier: <span id="dex-mod">+0</span></p>
+  </div>
+  <div class="ability">
+    <h3>CON</h3>
+    <input type="number" id="con" value="10" min="1" />
+    <p>Modifier: <span id="con-mod">+0</span></p>
+  </div>
+  <div class="ability">
+    <h3>INT</h3>
+    <input type="number" id="int" value="10" min="1" />
+    <p>Modifier: <span id="int-mod">+0</span></p>
+  </div>
+  <div class="ability">
+    <h3>WIS</h3>
+    <input type="number" id="wis" value="10" min="1" />
+    <p>Modifier: <span id="wis-mod">+0</span></p>
+  </div>
+  <div class="ability">
+    <h3>CHA</h3>
+    <input type="number" id="cha" value="10" min="1" />
+    <p>Modifier: <span id="cha-mod">+0</span></p>
+  </div>
+</section>
+<section class="combat-stats">
+  <div class="stat-block">
+    <h3>Hit Points</h3>
+    <p>28 / 28</p>
+  </div>
+  <div class="stat-block">
+    <h3>Armor Class</h3>
+    <p>17</p>
+  </div>
+  <div class="stat-block">
+    <h3>Initiative</h3>
+    <p>+2</p>
+  </div>
+</section>
+<section class="saving-throws">
+  <h2>Saving Throws</h2>
+  <ul>
+    <li><strong>Fortitude:</strong> +5</li>
+    <li><strong>Reflex:</strong> +2</li>
+    <li><strong>Will:</strong> +1</li>
+  </ul>
+</section>
+<section class="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div><strong>Appraise:</strong> +1</div>
+    <div><strong>Climb:</strong> +4</div>
+    <div><strong>Diplomacy:</strong> +2</div>
+    <div><strong>Hide:</strong> +3</div>
+    <div><strong>Listen:</strong> +5</div>
+    <div><strong>Move Silently:</strong> +2</div>
+    <div><strong>Search:</strong> +1</div>
+    <div><strong>Spot:</strong> +3</div>
+  </div>
+</section>
+<section class="combat-actions">
+  <h2>Combat Actions</h2>
+  <div class="action-grid">
+    <div class="action-card">
+      <h3>Longsword</h3>
+      <p><strong>Attack Bonus:</strong> +6</p>
+      <p><strong>Damage:</strong> 1d8+3 slashing</p>
+      <p><strong>Critical:</strong> 19-20/x2</p>
+    </div>
+    <div class="action-card">
+      <h3>Light Crossbow</h3>
+      <p><strong>Attack Bonus:</strong> +3</p>
+      <p><strong>Damage:</strong> 1d8 piercing</p>
+      <p><strong>Range:</strong> 80 ft</p>
+    </div>
+    <div class="action-card">
+      <h3>Power Attack</h3>
+      <p><strong>Type:</strong> Special</p>
+      <p><strong>Effect:</strong> Trade accuracy for bonus damage</p>
+    </div>
+  </div>
+</section>
+<section class="inventory">
+  <h2>Inventory</h2>
+
+  <div class="inventory-grid">
+    <div class="inventory-item">
+      <label for="weapon">Weapon:</label>
+      <input type="text" id="weapon" placeholder="Longsword">
+    </div>
+
+    <div class="inventory-item">
+      <label for="armor">Armor:</label>
+      <input type="text" id="armor" placeholder="Chainmail">
+    </div>
+
+    <div class="inventory-item">
+      <label for="shield">Shield:</label>
+      <input type="text" id="shield" placeholder="Steel Shield">
+    </div>
+  </div>
+
+  <div class="inventory-list">
+  <h3>Other Gear</h3>
+  <div class="gear-controls">
+    <input type="text" id="gear-input" placeholder="Enter item...">
+    <button onclick="addGearItem()">Add</button>
+  </div>
+  <ul id="gear-list"></ul>
+</div>
+
+</section>
+
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hardy’s Digital D&D Tools</p>
+  </footer>
+</body>
+</html>
